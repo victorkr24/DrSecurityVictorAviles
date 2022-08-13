@@ -1,0 +1,52 @@
+﻿@model Carro
+@{
+    ViewData["Title"] = "Editar";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1>Editar</h1>
+
+<div class="card">
+  <div class="card-header">
+    Editar Carro
+  </div>
+  <div class="card-body">
+    
+
+      <form asp-action="Editar" asp-controller="Mantenedor" method="post">
+
+           <input asp-for="IdCarro" type="hidden" class="form-control">
+      <div class="mb-3">
+        <label class="form-label">Nombre</label>
+        <input asp-for="Nombre" type="text" class="form-control">
+        <span asp-validation-for="Nombre" class="text-danger"></span>
+      </div>
+      <div class="mb-3">
+        <label class="form-label">Modelo</label>
+        <input asp-for="Modelo" type="text" class="form-control">
+        <span asp-validation-for="Modelo" class="text-danger"></span>
+      </div>
+       <div class="mb-3">
+        <label class="form-label">Numero de Serie</label>
+        <input asp-for="NumeroSerie" type="text" class="form-control">
+        <span asp-validation-for="NumeroSerie" class="text-danger"></span>
+      </div>
+
+         <div class="mb-3">
+        <label class="form-label">Color </label>
+        <input asp-for="IdColor" type="text" class="form-control">
+        <span asp-validation-for="IdColor" class="text-danger"></span>
+      </div>
+
+       <div class="mb-3">
+        <label class="form-label">Marca</label>
+        <input asp-for="IdMarca" type="text" class="form-control">
+        <span asp-validation-for="IdMarca" class="text-danger"></span>
+      </div>
+      <button type="submit" class="btn btn-primary">Guardar</button>
+      <a asp-action="Editar" asp-controller="Mantenedor" class="btn btn-warning">Volver a la lista</a>
+    </form>
+
+
+  </div>
+</div>
